@@ -9,12 +9,14 @@
 ### Fixes
 
 - [#988](https://github.com/okta/okta-auth-js/pull/988) Fixes Safari & Firefox browsers block `getWithPopup` issue
+- [#995](https://github.com/okta/okta-auth-js/pull/995) Sends cookie for `authn` related requests
 
 ### Other
 
 - [#981](https://github.com/okta/okta-auth-js/pull/981) TypeScript: Allows optional paramters for IDX methods
 - [#986](https://github.com/okta/okta-auth-js/pull/986) TypeScript: Interface `SignInWithRedirectOptions` should extend `TokenParams`
 - [#992](https://github.com/okta/okta-auth-js/pull/992) TypeScript: Adds fields for `Input` type in NextStep object
+- [#997](https://github.com/okta/okta-auth-js/pull/997) Validates `scopes` config param is an `array`
 
 ## 5.6.0
 
