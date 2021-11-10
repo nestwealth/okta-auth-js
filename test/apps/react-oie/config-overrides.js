@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const envModule = require('@okta/env');
 envModule.setEnvironmentVarsFromTestEnv();
@@ -22,8 +23,10 @@ module.exports = {
       new webpack.DefinePlugin({
         'process.env': env,
       }),
+      new BundleAnalyzerPlugin()
     ]);
 
+    config.mode = 'development';
     config.devtool = 'source-map';
     config.module.rules.push({
       test: /\.js$/,

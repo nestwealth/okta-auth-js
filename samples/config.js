@@ -24,7 +24,8 @@ const spaDefaults = Object.assign({
   signinForm: true,
   mfa: true,
   authn: true,
-  signinWidget: true
+  signinWidget: true,
+  emailVerify: false // set to true once tested/ready for public release
 }, defaults);
 
 const webDefaults = Object.assign({
@@ -86,7 +87,8 @@ const samples = [
       'mfa-password-and-email',
       'mfa-password-and-sms',
       'social-login-mfa',
-      'social-idp'
+      'social-idp',
+      'totp'
     ],
     useEnv: true,
     express: true,
