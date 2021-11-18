@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@netwealth/okta-auth-js",
+  "name": "@nestwealth/okta-auth-js",
   "description": "The Okta Auth SDK",
   "version": "5.8.0",
   "homepage": "https://git@github.com:nestwealth/okta-auth-js",
