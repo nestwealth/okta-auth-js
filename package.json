@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "@okta/okta-auth-js",
+  "name": "@netwealth/okta-auth-js",
   "description": "The Okta Auth SDK",
   "version": "5.8.0",
-  "homepage": "https://github.com/okta/okta-auth-js",
+  "homepage": "https://git@github.com:nestwealth/okta-auth-js",
   "license": "Apache-2.0",
   "type": "commonjs",
   "main": "build/cjs/index.js",
@@ -12,10 +12,7 @@
   "types": "build/lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/okta/okta-auth-js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/okta/okta-auth-js/issues"
+    "url": "https://git@github.com:nestwealth/okta-auth-js.git"
   },
   "scripts": {
     "banners": "node ./scripts/maintain-banners.js",
@@ -154,7 +151,7 @@
         "dom"
       ],
       "paths": {
-        "@okta/okta-auth-js": [
+        "@nestwealth/okta-auth-js": [
           "./build"
         ]
       }
