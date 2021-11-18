@@ -61,7 +61,14 @@ export function addPostMessageListener(sdk: OktaAuth, timeout, state) {
       // This may happen if apps with different issuers are running on the same host url
       // If they share the same storage key, they may read and write tokens in the same location.
       // Common when developing against http://localhost
-      if (e.origin !== sdk.getIssuerOrigin()) {
+
+      var issuerOrigin = sdk.getIssuerOrigin();
+      if (e.origin !== issuerOrigin && !(sdk['config'].loginWithoutPromptSsoOptions.issuer)) {
+      // if (e.origin !== issuerOrigin) {
+        if (sdk.options.devMode) {
+          console.log("Issuer Origin from saved token: ", e.origin, e)
+          console.log("Issuer Origin from config: ", issuerOrigin, sdk)
+        }
         return reject(new AuthSdkError('The request does not match client configuration'));
       }
       resolve(e.data);
